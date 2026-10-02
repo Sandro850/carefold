@@ -50,10 +50,9 @@ All contributors and maintainers are expected to adhere to the [Carefold Code of
 
 5. **Start local services**:
    ```bash
-   # Terminal 1: Backend API
-   cd backend
-   source .venv/bin/activate
-   uvicorn carefold.api.main:app --reload --port 8000
+   # Terminal 1: Backend API (run from the repository root)
+   source backend/.venv/bin/activate
+   uvicorn carefold.main:app --reload --port 8000
 
    # Terminal 2: Next.js Frontend
    pnpm --filter web dev

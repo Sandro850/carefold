@@ -77,7 +77,7 @@ pip install -e backend
 pip install -r backend/requirements-dev.txt
 
 # Start backend server (Terminal 1)
-uvicorn carefold.api.main:app --host 127.0.0.1 --port 8000 --reload
+uvicorn carefold.main:app --host 127.0.0.1 --port 8000 --reload
 
 # Start Next.js marketplace UI (Terminal 2)
 pnpm --filter web dev
