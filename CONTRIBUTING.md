@@ -26,7 +26,7 @@ All contributors and maintainers are expected to adhere to the [Carefold Code of
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/carefold/carefold.git
+   git clone https://github.com/spectrayan/carefold.git
    cd carefold
    ```
 
@@ -45,8 +45,11 @@ All contributors and maintainers are expected to adhere to the [Carefold Code of
    cd ..
    ```
 
-4. **Environment Variables**:
-   Copy `.env.example` to `.env` in both `backend/` and `apps/web/` if needed, and configure any model providers.
+4. **Environment Variables** (optional):
+   All backend settings have local-first defaults. To override them, copy the root `.env.example` to `.env` (the backend reads `.env` from the directory it is started in, so start it from the repository root). See the [Configuration Reference](docs/getting-started/configuration.md) for every `CAREFOLD_*` setting. Cloud model provider keys (`GOOGLE_API_KEY`, `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`) are read from your shell environment.
+   ```bash
+   cp .env.example .env
+   ```
 
 5. **Start local services**:
    ```bash

@@ -23,7 +23,7 @@ Before installing Carefold, ensure your system meets the following requirements:
 Clone the Carefold repository from GitHub and navigate to the project directory:
 
 ```bash
-git clone https://github.com/carefold/carefold.git
+git clone https://github.com/spectrayan/carefold.git
 cd carefold
 ```
 
