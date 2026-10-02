@@ -40,7 +40,7 @@
 
 **Carefold** is an open-source, local-first healthcare AI agent marketplace and multi-agent execution runtime. Designed for clinical visit preparation, health insurance navigation, and chronic care support, Carefold runs entirely on user-controlled hardware (or private self-hosted endpoints) to safeguard patient privacy.
 
-It pairs a **5-phase LangGraph orchestration engine** with **22 specialist clinical and administrative navigators**, modular skill packs, hexagonal memory architecture (ready for Spector cognitive memory), zero-trust sandboxed tools, and a two-tier clinical safety guardrail system.
+It pairs a **5-phase LangGraph orchestration engine** with **22 specialist clinical and administrative navigators**, modular skill packs, hexagonal memory architecture (with Spector cognitive memory integration planned), zero-trust sandboxed tools, and a two-tier clinical safety guardrail system.
 
 ---
 
@@ -176,7 +176,7 @@ Carefold implements a hexagonal architecture for memory and agent discovery:
 * **`MemoryPort`**: Cognitive memory interface supporting working, episodic, semantic, and procedural memory tiers with salience ranking and decay.
 * **`CatalogPort`**: Full-text and BM25 agent/skill catalog search index.
 * **Zero-Dependency SQLite FTS5 Adapter**: Out-of-the-box local storage requiring no external services.
-* **Spector-Ready**: Seamlessly connects to [Spector](https://github.com/spectrayan/spector) — Spectrayan's SIMD-accelerated cognitive memory engine — via a single configuration flag (`MEMORY_BACKEND=spector`).
+* **Spector Integration (Planned)**: A `MemoryPort` adapter for [Spector](https://github.com/spectrayan/spector) — Spectrayan's SIMD-accelerated cognitive memory engine — is planned for Q1–Q2 2027 (see [ROADMAP](ROADMAP.md)). The `CAREFOLD_MEMORY_BACKEND` setting already reserves the `spector` value, but only `sqlite` is implemented today; selecting `spector` currently raises a "not yet implemented" error.
 
 ---
 

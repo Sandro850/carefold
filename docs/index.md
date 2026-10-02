@@ -65,7 +65,7 @@ Carefold models human memory using four distinct cognitive tiers:
 - **`SEMANTIC`**: Consolidated patient profile, preferences, and clinical concepts.
 - **`PROCEDURAL`**: Clinical guidelines, checklists, and standard operating procedures.
 
-All memory operations and agent/skill discovery are mediated through abstract interfaces (`MemoryPort` and `CatalogPort`), allowing seamless switching between local SQLite FTS5 and enterprise Spector MCP backends.
+All memory operations and agent/skill discovery are mediated through abstract interfaces (`MemoryPort` and `CatalogPort`), so storage backends can be swapped without changing workflow nodes. Local SQLite FTS5 is the implemented backend today; a Spector MCP adapter is planned for Q1–Q2 2027 (see the project roadmap).
 
 ### 4. Deterministic Clinical Safety & Gating
 Carefold enforces multi-layered safety gates prior to agent dispatch:

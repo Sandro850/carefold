@@ -99,7 +99,7 @@ Agent definitions in Carefold strictly maintain separation of concerns:
 All persistence and discovery operations interact exclusively with abstract port interfaces:
 - `MemoryPort` mediates access to 4 cognitive memory tiers (`WORKING`, `EPISODIC`, `SEMANTIC`, `PROCEDURAL`).
 - `CatalogPort` mediates agent and skill indexing and category hierarchy generation.
-- The default adapter is `SqliteMemoryAdapter` and `SqliteCatalogAdapter` using SQLite FTS5. This architecture enables drop-in migration to enterprise memory backends (such as Spector MCP) without altering core workflow nodes.
+- The default adapter is `SqliteMemoryAdapter` and `SqliteCatalogAdapter` using SQLite FTS5. This architecture is designed so additional memory backends (such as the planned Spector MCP adapter) can be added without altering core workflow nodes.
 
 ### 3. Execution Topologies
 The orchestrator plans execution dynamically based on patient presentation complexity:
