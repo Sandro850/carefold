@@ -40,7 +40,7 @@
 
 **Carefold** is an open-source, local-first healthcare AI agent marketplace and multi-agent execution runtime. Designed for clinical visit preparation, health insurance navigation, and chronic care support, Carefold runs entirely on user-controlled hardware (or private self-hosted endpoints) to safeguard patient privacy.
 
-It pairs a **5-phase LangGraph orchestration engine** with **22 specialist clinical and administrative navigators**, modular skill packs, hexagonal memory architecture (with Spector cognitive memory integration planned), zero-trust sandboxed tools, and a two-tier clinical safety guardrail system.
+It pairs a **5-phase LangGraph orchestration engine** with **20 specialist clinical and administrative navigators**, modular skill packs, hexagonal memory architecture (with Spector cognitive memory integration planned), zero-trust sandboxed tools, and a two-tier clinical safety guardrail system.
 
 ---
 
@@ -134,7 +134,7 @@ flowchart TD
 
 ## 🏥 Specialist Agent Topology
 
-Carefold includes 22 specialist clinical/navigational agents and 6 internal system infrastructure agents:
+Carefold includes 20 specialist clinical/navigational agents and 6 internal system infrastructure agents, backed by 22 skill packs (plus `_template` starters for new agents and skills):
 
 | Agent Identifier | Domain | Category | Risk Class | Clinical Scope & Capabilities |
 |---|---|---|---|---|
@@ -151,7 +151,7 @@ Carefold includes 22 specialist clinical/navigational agents and 6 internal syst
 | `urology-guide` | `clinical` | `urology` | `clinical_assist` | Bladder health, frequency-volume tracking, prostate consultation prep |
 | `eye-guide` | `clinical` | `ophthalmology` | `clinical_assist` | Vision changes, glaucoma & macular degeneration monitoring, surgery prep |
 | `ent-guide` | `clinical` | `ent` | `clinical_assist` | Sinusitis tracking, tinnitus diaries, audiogram & hearing consultation prep |
-| `visit-steward` | `clinical` | `general` | `clinical_assist` | General primary care preparation, doctor agendas, medication reconciliations |
+| `visit-steward` | `navigation` | `appointments` | `wellness` | General primary care preparation, doctor agendas, medication reconciliations |
 | `benefits-guide` | `navigation` | `insurance` | `admin` | EOB breakdown, deductible/copay tracking, insurance policy explainer |
 | `claims-appeals-guide`| `navigation`| `appeals` | `admin` | Denied claim analysis, ERISA appeal timelines, external review drafting |
 | `prior-auth-navigator`| `navigation`| `authorizations` | `admin` | Prior authorization criteria, step therapy documentation, physician checklists |

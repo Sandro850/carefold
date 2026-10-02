@@ -30,16 +30,21 @@ You can verify the backend is running by querying the health check endpoint:
 curl http://localhost:8000/api/health
 ```
 
-Expected JSON response:
+Expected JSON response (abbreviated; see the [API Reference](../api/reference.md) for the full schema):
 ```json
 {
-  "status": "healthy",
+  "status": "ok",
   "version": "0.1.0",
-  "agents_count": 22,
-  "skills_count": 23,
-  "memory_backend": "sqlite"
+  "modelReachable": true,
+  "workspace": {
+    "root": "/path/to/carefold",
+    "agentsCount": 22,
+    "skillsCount": 23
+  }
 }
 ```
+
+`status` reports `degraded` until a model provider (for example a local Ollama server) is reachable. `agentsCount` and `skillsCount` count workspace directories, so they include the `agents/_system` folder and the `_template` starters alongside the 20 specialist agents and 22 skill packs.
 
 ---
 
@@ -59,7 +64,7 @@ The Next.js application will compile and become available at `http://localhost:3
 ## Step 3: Browse the Agent Marketplace
 
 1. Open your browser and navigate to `http://localhost:3000`.
-2. You will see the **Carefold Agent Marketplace**, displaying the 22 specialist agents categorized into:
+2. You will see the **Carefold Agent Marketplace**, displaying the 20 specialist agents categorized into:
    - **Organ-Specific Clinical Navigators** (e.g., Cardiology Guide, Nephrology Guide, Oncology Navigator).
    - **Administrative Stewards & Companions** (e.g., Prior Auth Navigator, Claims Appeals Guide, Formulary Guide).
 3. Click on **Cardiology Guide** to inspect its manifest, clinical care stages, declared skills (`cardiology-prep`), and sandboxed tool permissions.

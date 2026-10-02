@@ -18,10 +18,10 @@ carefold/
 │   │   ├── safety/           # Emergency red-flag detection & non-clinical refusal classifier
 │   │   ├── loaders/          # Context loader & resource parsing
 │   │   └── schemas/          # Pydantic models for manifests, state, and API schemas
-│   └── tests/                # 3,800+ test suite and 47-point security penetration suite
-├── apps/web/                 # Next.js 15 healthcare marketplace and chat UI (Tailwind CSS)
-├── agents/                   # 22 specialized agent manifests and pure personas
-├── skills/                   # 23 clinical and administrative skill packs with golden evals
+│   └── tests/                # 3,900+ test suite and 47-point security penetration suite
+├── apps/web/                 # Next.js 16 healthcare marketplace and chat UI (Tailwind CSS)
+├── agents/                   # 20 specialist agent manifests, 6 system agents (_system/), and a starter template
+├── skills/                   # 22 clinical and administrative skill packs, plus a starter template
 ├── packages/cli/             # Scaffolding and developer CLI
 ├── packages/runner/          # Sandboxed local execution runner
 ├── docs/                     # Verified MkDocs Material documentation and ADR repository

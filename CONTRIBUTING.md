@@ -16,7 +16,7 @@ All contributors and maintainers are expected to adhere to the [Carefold Code of
 
 ### Prerequisites
 
-- **Node.js**: `v20.x` or `v22.x` (LTS recommended)
+- **Node.js**: `v22.x` LTS or newer (required by `engines.node >=22.0.0`)
 - **pnpm**: `v9.x` or higher
 - **Python**: `3.12` or `3.14`
 - **Git**: Configured with your real name and email for DCO signing
