@@ -27,7 +27,7 @@
   <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-22_LTS-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node" /></a>
   <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-16_Turbopack-000000.svg?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" /></a>
   <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-0.115-009688.svg?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" /></a>
-  <a href="https://github.com/spectrayan/carefold/pkgs/container/carefold"><img src="https://img.shields.io/badge/Docker-GHCR-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" /></a>
+  <a href="docker/docker-compose.yml"><img src="https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker Compose" /></a>
   <a href="https://github.com/spectrayan/carefold/actions"><img src="https://img.shields.io/github/actions/workflow/status/spectrayan/carefold/ci.yml?branch=main&style=for-the-badge" alt="Build" /></a>
   <a href="https://spectrayan.github.io/carefold/"><img src="https://img.shields.io/badge/Docs-MkDocs-blue?logo=materialformkdocs&style=for-the-badge" alt="Docs" /></a>
 </p>
@@ -49,12 +49,17 @@ It pairs a **5-phase LangGraph orchestration engine** with **22 specialist clini
 Get a local Carefold runtime and agent marketplace running in seconds:
 
 ### 1. Instant Launch via Docker Compose
-```bash
-# Start FastAPI backend (:8000) and Next.js marketplace UI (:3000)
-docker compose up -d
+Images are built locally from [`docker/Dockerfile`](docker/Dockerfile); no prebuilt image is required.
 
-# Or include local Ollama for 100% offline local LLM inference:
-docker compose --profile embeddings up -d
+```bash
+# From the repository root: build and start the FastAPI backend (:8000) and Next.js marketplace UI (:3000)
+docker compose -f docker/docker-compose.yml up -d --build
+
+# Or also start a local Ollama container for on-device LLM inference:
+docker compose -f docker/docker-compose.yml --profile ollama up -d --build
+
+# Pull the default model into the Ollama container (first run only)
+docker compose -f docker/docker-compose.yml exec ollama ollama pull llama3.2
 ```
 Visit `http://localhost:3000` to browse specialist agents and launch private consultations.
 
