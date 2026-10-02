@@ -83,7 +83,7 @@ Click **"Try in Chat"** on the Cardiology Guide card to launch the consultation 
 2. **Validation & Gating**: The input is checked against emergency red-flag patterns (no acute chest pain or radiation detected).
 3. **Plan & Provision**: The orchestrator matches the query to `cardiology-guide`, inspects its declared skill `cardiology-prep`, and provisions `hypertension_log_template.md` and `cardiology_visit_agenda.md` directly into the agent prompt.
 4. **Execution Dispatch**: The `cardiology-guide` specialist generates empathetic guidance and structures a two-week blood pressure logging agenda.
-5. **Synthesis & Guardrails**: Robotic preambles and duplicate disclaimers are removed, and the single canonical compliance disclaimer footer is appended.
+5. **Synthesis & Guardrails**: Robotic preambles and duplicate disclaimers are removed, and the single canonical disclaimer footer is appended.
 6. **Streaming Delivery**: The response streams in real time via SSE to the web chat interface.
 
 ---
@@ -109,6 +109,6 @@ Sample audit entry:
 }
 ```
 
-Notice that patient health prompts and completion bodies are omitted, ensuring full HIPAA and privacy compliance in the audit log.
+Notice that patient health prompts and completion bodies are omitted. Zero-body audit logging is designed to support privacy reviews by keeping health content out of the audit trail; on its own it does not make a deployment HIPAA compliant, and Carefold does not claim any compliance certification.
 
 Next, explore the [Architecture Overview](../architecture/overview.md) to learn how Carefold orchestrates multi-agent consultations.

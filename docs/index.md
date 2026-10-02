@@ -1,8 +1,8 @@
 # Carefold Documentation
 
-Welcome to the documentation for **Carefold**, an enterprise-ready healthcare AI agent marketplace and local-first runtime developed by **Spectrayan**.
+Welcome to the documentation for **Carefold**, an open-source healthcare AI agent marketplace and local-first runtime developed by **Spectrayan**.
 
-Carefold delivers empathetic, organ-specific clinical navigation and healthcare administrative stewardship while enforcing strict, auditable non-clinical safety boundaries. It is designed from the ground up for patient privacy, zero-data-leakage local execution, and modular extensibility.
+Carefold delivers empathetic, organ-specific clinical navigation and healthcare administrative stewardship while enforcing strict, auditable non-clinical safety boundaries. It is designed from the ground up for patient privacy, local-first execution, and modular extensibility.
 
 ---
 

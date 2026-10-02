@@ -107,7 +107,7 @@ The orchestrator plans execution dynamically based on patient presentation compl
 - **`Parallel`**: Multimorbid presentations (e.g., patient presenting with overlapping symptoms across cardiology and pulmonology) trigger concurrent execution via `asyncio.gather`.
 - **`Pipeline`**: Cross-functional handoffs (e.g., clinical guidance followed by prior authorization navigation) execute in dependency order with topological sorting.
 
-### 4. Zero-Body Audit Logging & HIPAA Guardrails
+### 4. Zero-Body Audit Logging & Privacy Safeguards
 To safeguard Protected Health Information (PHI):
 - Consultation events log metadata (timestamp, agent ID, allowed status, event type).
 - Sensitive prompt and completion bodies are redacted by default (`CAREFOLD_AUDIT_STORE_BODIES=false`).
